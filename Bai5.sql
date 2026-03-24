@@ -1,0 +1,28 @@
+CREATE DATABASE IF NOT EXISTS Hospital_Bai5;
+USE Hospital_Bai5;
+
+DROP TABLE IF EXISTS Finance;
+DROP TABLE IF EXISTS Beds;
+DROP TABLE IF EXISTS Patients;
+
+CREATE TABLE Patients (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    age INT,
+    bed_id INT
+);
+
+CREATE TABLE Beds (
+    bed_id INT PRIMARY KEY,
+    status VARCHAR(50)
+);
+
+CREATE TABLE Finance (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    patient_id INT,
+    amount DOUBLE
+);
+
+INSERT INTO Beds VALUES (1, 'TRỐNG');
+INSERT INTO Beds VALUES (2, 'TRỐNG');
+INSERT INTO Beds VALUES (3, 'TRỐNG');
